@@ -1,0 +1,85 @@
+;
+; SPISLAVEASSEMBLY.asm
+;
+; Created: 07/02/2018 18:01:01
+; Author : thilina-pc
+;
+
+
+.INCLUDE "M32DEF.INC"
+
+.EQU    SS          = PORTB4
+.EQU     MOSI       = PORTB5
+.EQU     MISO         = PORTB6
+.EQU     SCK         = PORTB7
+.EQU    fclk                = 16000000 
+.ORG 0x00
+		JMP MAIN
+
+MAIN:
+	LDI R16,LOW(RAMEND)
+	OUT SPL,R16
+	LDI R16,HIGH(RAMEND)
+	OUT SPH,R16
+
+
+	LDI R16,0xFF
+	OUT DDRD,R16
+	OUT DDRC,R16
+	LDI R16,0x40
+	OUT DDRB,R16
+	OUT SPCR,R16
+
+
+
+HERE:
+	LDI R16,0xFF
+	OUT PORTC,R16
+	OUT SPDR,R16
+	LOOP:
+		IN R16,SPSR
+		ANDI R16,0b10000000
+	
+		IN R17,SPDR
+		OUT PORTD,R17
+
+		CPI R16,0x00
+		BREQ LOOP
+	
+		RJMP    HERE
+
+
+
+//==================DELAYS==================================//
+//******************CALL A DELAY OF R16*1us*****************//
+DELAY_1US:
+	CALL DELAYUS
+	DEC R16
+	BRNE DELAY_1US
+DELAYUS:
+	PUSH R16
+	POP R16
+	PUSH R16
+	POP R16
+	RET
+
+
+//******************CALL A DELAY OF R16*1ms*****************//
+DELAY_1MS:
+	CALL DELAYMS
+	DEC R16
+	BRNE DELAY_1MS
+
+DELAYMS:
+	PUSH YL
+	PUSH YH
+	LDI YH,LOW(((fcLk/1000)-18)/4)
+	LDI Yh,HIGH(((fcLk/1000)-18)/4)
+
+DELAY1MS_01:
+	SBIW YH:YL,1
+	BRNE DELAY1MS_01
+	POP YH
+	POP YL
+	RET
+	 

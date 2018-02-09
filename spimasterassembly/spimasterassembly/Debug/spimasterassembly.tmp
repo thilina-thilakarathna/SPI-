@@ -1,0 +1,36 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega32"</DEVICE>
+ <WORKING_DIR>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m32def.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\M32DEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\Debug\spimasterassembly.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>spimasterassembly.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>spimasterassembly.map</FILE>
+  <FILE>spimasterassembly.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <MAIN><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>18</LINE></MAIN>
+  <LOOP><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>36</LINE></LOOP>
+  <DELAY_1MS><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>80</LINE></DELAY_1MS>
+  <LOOP1><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>49</LINE></LOOP1>
+  <HERE><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>58</LINE></HERE>
+  <DELAY_1US><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>67</LINE></DELAY_1US>
+  <DELAYUS><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>71</LINE></DELAYUS>
+  <DELAYMS><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>85</LINE></DELAYMS>
+  <DELAY1MS_01><FILE>D:\Saved\c-atmel\New folder\spimasterassembly\spimasterassembly\main.asm</FILE><LINE>91</LINE></DELAY1MS_01>
+ </LABELS>
+</ASSEMBLER_INFO>
